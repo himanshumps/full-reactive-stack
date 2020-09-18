@@ -8,8 +8,8 @@ import {Observable} from "rxjs";
 @Injectable()
 export class QuoteBlockingService {
 
-  url: string = 'http://localhost:8080/quotes-blocking';
-  urlPaged: string = 'http://localhost:8080/quotes-blocking-paged';
+  url: string = 'http://openjdk-app-team6.apps.cluster-7a59.7a59.example.opentlc.com/quotes-blocking';
+  urlPaged: string = 'http://openjdk-app-team6.apps.cluster-7a59.7a59.example.opentlc.com/quotes-blocking-paged';
 
   constructor(private http: HttpClient) {}
 
@@ -20,5 +20,4 @@ export class QuoteBlockingService {
     }
     return this.http.get<Array<Quote>>(url);
   }
-
 }
