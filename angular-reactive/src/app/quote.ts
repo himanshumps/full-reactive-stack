@@ -1,10 +1,10 @@
 export class Quote {
-  id: number;
+  bookId: number;
   book: string;
   content: string;
 
-  constructor( id: number, book: string, content: string) {
-    this.id = id;
+  constructor( bookId: number, book: string, content: string) {
+    this.bookId = bookId;
     this.book = book;
     this.content = content;
   }
