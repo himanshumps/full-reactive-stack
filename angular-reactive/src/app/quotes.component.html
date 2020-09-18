@@ -23,7 +23,7 @@
       </thead>
       <tbody>
       <tr *ngFor="let quote of quoteArray" [class.success]="quote === selectedQuote" (click)="onSelect(quote)">
-        <td>{{quote.id}}</td>
+        <td>{{quote.bookId}}</td>
         <td>{{quote.book}}</td>
         <td>{{quote.content.substr(0, 30)}}...</td>
       <tr>
