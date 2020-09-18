@@ -7,8 +7,8 @@ import {Observable} from 'rxjs';
 @Injectable()
 export class QuoteReactiveService {
 
-  url: string = 'http://localhost:8080/quotes-reactive';
-  urlPaged: string = 'http://localhost:8080/quotes-reactive-paged';
+  url: string = 'http://openjdk-app-team6.apps.cluster-7a59.7a59.example.opentlc.com/quotes-reactive';
+  urlPaged: string = 'http://openjdk-app-team6.apps.cluster-7a59.7a59.example.opentlc.com/quotes-reactive-paged';
 
   getQuoteStream(page?: number, size?: number): Observable<Quote> {
     return new Observable<Quote>((observer) => {
@@ -20,7 +20,7 @@ export class QuoteReactiveService {
       eventSource.onmessage = (event) => {
         console.debug('Received event: ', event);
         let json = JSON.parse(event.data);
-        observer.next(new Quote(json['id'], json['book'], json['content']));
+        observer.next(new Quote(json['bookId'], json['book'], json['content']));
       };
       eventSource.onerror = (error) => {
         // readyState === 0 (closed) means the remote source closed the connection,
