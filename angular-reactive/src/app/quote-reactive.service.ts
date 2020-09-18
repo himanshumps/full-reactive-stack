@@ -20,7 +20,7 @@ export class QuoteReactiveService {
       eventSource.onmessage = (event) => {
         console.debug('Received event: ', event);
         let json = JSON.parse(event.data);
-        observer.next(new Quote(json['bookId'], json['book'], json['content']));
+        observer.next(new Quote(json['movieId'], json['movie'], json['plot']));
       };
       eventSource.onerror = (error) => {
         // readyState === 0 (closed) means the remote source closed the connection,

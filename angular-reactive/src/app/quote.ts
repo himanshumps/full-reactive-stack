@@ -1,11 +1,11 @@
 export class Quote {
-  bookId: number;
-  book: string;
-  content: string;
+  movieId: number;
+  movie: string;
+  plot: string;
 
-  constructor( bookId: number, book: string, content: string) {
-    this.bookId = bookId;
-    this.book = book;
-    this.content = content;
+  constructor( movieId: number, movie: string, plot: string) {
+    this.movieId = movieId;
+    this.movie = movie;
+    this.plot = plot;
   }
 }

@@ -22,7 +22,7 @@ export class QuotesComponent {
   constructor(private quoteReactiveService: QuoteReactiveService, private quoteBlockingService: QuoteBlockingService, private cdr: ChangeDetectorRef) {
     this.mode = "reactive";
     this.pagination = true;
-    this.page = 0;
+    this.page = 1;
     this.size = 50;
   }
 

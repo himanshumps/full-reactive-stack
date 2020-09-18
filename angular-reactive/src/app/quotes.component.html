@@ -16,22 +16,22 @@
     <table class="table">
       <thead>
       <tr>
-        <th>Quote ID</th>
-        <th>Book</th>
-        <th>Quote content</th>
+        <th>Movie ID</th>
+        <th>Movie</th>
+        <th>Movie plot</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let quote of quoteArray" [class.success]="quote === selectedQuote" (click)="onSelect(quote)">
-        <td>{{quote.bookId}}</td>
-        <td>{{quote.book}}</td>
-        <td>{{quote.content.substr(0, 30)}}...</td>
+        <td>{{quote.movieId}}</td>
+        <td>{{quote.movie}}</td>
+        <td>{{quote.plot.substr(0, 30)}}...</td>
       <tr>
       </tbody>
     </table>
   </div>
   <div class="col-md-4">
-    <div class="message">Click on a quote for more details</div>
+    <div class="message">Click on a movie for more details</div>
     <app-quote-detail [quote]="selectedQuote"></app-quote-detail>
   </div>
 </div>
